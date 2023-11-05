@@ -16,6 +16,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_02_001803) do
 
   create_table "moves", force: :cascade do |t|
     t.string "name"
+    t.string "fighter_or_fight"
+    t.integer "quantity"
     t.text "description"
     t.bigint "weapon_id", null: false
     t.string "image_url"
@@ -39,6 +41,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_02_001803) do
     t.string "email"
     t.text "bio"
     t.string "password_digest"
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
