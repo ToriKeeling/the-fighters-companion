@@ -73,3 +73,5 @@ end
 
 # helps create JSON web tokens
 gem 'jwt'
+
+gem 'rack-cors'

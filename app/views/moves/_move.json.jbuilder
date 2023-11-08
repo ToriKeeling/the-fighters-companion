@@ -1,0 +1,9 @@
+json.id move.id
+json.fighter_or_fight move.fighter_or_fight
+json.quantity move.quantity
+json.description move.description
+json.weapon move.weapon
+json.image_url move.image_url
+json.video_url move.video_url
+json.created_at move.created_at
+json.updated_at move.updated_at

@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
   post "/sessions" => "sessions#create"
   get "/weapons" => "weapons#index"
+  get "/weapons/:id" => "weapons#show"
+  get "/moves" => "moves#index"
 end
