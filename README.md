@@ -1,24 +1,36 @@
-# README
+# <The Fighters Companion>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Fighter's Companion's main function is to display an interactive checklist of specific weapon moves that the user can check if they are used in the choreography for their Skills Proficiency Test (SPT) or Skills Proficiency Renewal (SPR) with the Society of American Fight Directors. The app helps to further eliminate confusion and adds more accessibility to actor combatants. I was inspired to create this from my own experiences taking tests and renewals, desiring an easier experience.
 
-Things you may want to cover:
+A User can:
 
-* Ruby version
+- sign up for an account
+- log in
+- see a list of all 8 certifiable weapons
+- see more info about the weapon
+- select a weapon
+- see that weapons moves checklist
+- check the boxes to the right of the move indicating that move is being used
 
-* System dependencies
+Technologies include Ruby on Rails backend, React.js frontend
 
-* Configuration
+## Installation
 
-* Database creation
+```bash
+bundle install
+rails db:create db:migrate db:seed
+```
 
-* Database initialization
+## Usage
 
-* How to run the test suite
+```bash
+rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Roadmap
 
-* Deployment instructions
+Ideas I plan on implementing in the future:
 
-* ...
+- the user can save their checklists to review later
+- the user can view short videos of the specific moves
+- Choreography Notation: User can create and title a Fight, add as many columns needed per fighter then can notate moves in each column
