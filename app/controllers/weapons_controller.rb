@@ -1,7 +1,7 @@
 class WeaponsController < ApplicationController
   def index
     @weapons = Weapon.all
-    render :index, json: @weapons, include: :moves
+    render :index
   end
   def show
     @weapon = Weapon.find_by(id: params[:id])

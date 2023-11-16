@@ -221,3 +221,18 @@ unarmed_move13 = Move.create!(name: "Knap Technique: Knap", fighter_or_fight: "F
 SelectedMove.create!(user: user, move: broadsword_move8)
 SelectedMove.create!(user: user, move: broadsword_move6)
 SelectedMove.create!(user: user, move: broadsword_move17)
+
+Move.all.each do | move |
+  if move.fighter_or_fight == "Fight"
+    move.quantity.times do 
+      MoveRequirement.create!(move: move, category: "Fight")
+    end
+  elsif move.fighter_or_fight == "Fighter"
+    move.quantity.times do 
+      MoveRequirement.create!(move: move, category: "Red Fighter")
+    end
+    move.quantity.times do 
+      MoveRequirement.create!(move: move, category: "Blue Fighter")
+    end
+  end
+end 

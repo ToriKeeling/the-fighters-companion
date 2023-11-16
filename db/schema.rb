@@ -10,9 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_02_001803) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_16_022907) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "move_requirements", force: :cascade do |t|
+    t.bigint "move_id", null: false
+    t.string "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["move_id"], name: "index_move_requirements_on_move_id"
+  end
 
   create_table "moves", force: :cascade do |t|
     t.string "name"
@@ -54,6 +62,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_02_001803) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "move_requirements", "moves"
   add_foreign_key "moves", "weapons"
   add_foreign_key "selected_moves", "moves"
   add_foreign_key "selected_moves", "users"
